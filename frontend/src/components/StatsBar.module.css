@@ -1,0 +1,14 @@
+.bar{
+  display:flex;gap:0;
+  background:var(--surface);
+  border-bottom:1px solid var(--border);
+  overflow-x:auto;
+  flex-shrink:0;
+}
+.item{
+  display:flex;flex-direction:column;align-items:center;
+  padding:6px 20px;border-right:1px solid var(--border);
+  min-width:100px;
+}
+.val{font-size:15px;font-weight:600;font-family:var(--mono);color:var(--accent)}
+.label{font-size:10px;color:var(--muted);margin-top:1px;letter-spacing:.05em}

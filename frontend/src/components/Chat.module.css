@@ -1,0 +1,119 @@
+.panel{
+  width:400px;min-width:400px;
+  background:var(--surface);border-left:1px solid var(--border);
+  display:flex;flex-direction:column;overflow:hidden;
+}
+
+/* Header */
+.header{
+  padding:13px 18px;border-bottom:1px solid var(--border);
+  display:flex;align-items:center;gap:10px;flex-shrink:0;
+}
+.avatar{
+  width:34px;height:34px;border-radius:9px;
+  background:linear-gradient(135deg,#1e3a5f,var(--accent));
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;color:#fff;letter-spacing:.5px;
+}
+.name{font-size:13px;font-weight:600}
+.sub{font-size:11px;color:var(--muted)}
+.dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--green);margin-left:auto;
+  box-shadow:0 0 6px var(--green);
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+/* Messages */
+.messages{
+  flex:1;overflow-y:auto;padding:14px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.msg{display:flex;flex-direction:column;gap:4px;max-width:95%}
+.user{align-self:flex-end;align-items:flex-end}
+.bot{align-self:flex-start;align-items:flex-start}
+
+.label{font-size:9.5px;color:var(--muted);font-family:var(--mono);letter-spacing:.08em}
+
+.bubble{
+  padding:9px 13px;border-radius:10px;
+  font-size:13px;line-height:1.56;
+}
+.user .bubble{
+  background:var(--accent);color:#fff;border-bottom-right-radius:3px;
+}
+.bot .bubble{
+  background:var(--surface2);color:var(--text);
+  border:1px solid var(--border);border-bottom-left-radius:3px;
+}
+
+.sqlBlock{
+  background:#0d1117;border:1px solid var(--border);border-radius:6px;
+  padding:8px 10px;font-family:var(--mono);font-size:10px;color:var(--cyan);
+  max-width:370px;overflow-x:auto;white-space:pre-wrap;word-break:break-all;
+}
+
+.tableWrap{overflow-x:auto;max-width:370px}
+.table{
+  font-size:10px;font-family:var(--mono);border-collapse:collapse;min-width:100%;
+}
+.table th,.table td{
+  padding:4px 8px;border:1px solid var(--border);
+  text-align:left;white-space:nowrap;
+}
+.table th{background:var(--surface2);color:var(--muted)}
+.table tr:hover td{background:var(--surface2)}
+.moreRows{font-size:10px;color:var(--muted);padding:4px 8px;font-family:var(--mono)}
+
+.hlBadge{
+  font-size:10px;color:var(--yellow);font-family:var(--mono);
+  background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.3);
+  padding:2px 9px;border-radius:10px;
+}
+
+/* Typing indicator */
+.typing{
+  display:flex;gap:4px;padding:10px 14px;
+  background:var(--surface2);border:1px solid var(--border);
+  border-radius:10px;border-bottom-left-radius:3px;width:fit-content;
+}
+.dot1,.dot2,.dot3{
+  width:6px;height:6px;border-radius:50%;background:var(--muted);
+  animation:bounce 1.2s infinite;
+}
+.dot2{animation-delay:.2s}
+.dot3{animation-delay:.4s}
+@keyframes bounce{0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(-5px);opacity:1}}
+
+/* Input area */
+.inputArea{
+  padding:12px 14px;border-top:1px solid var(--border);
+  display:flex;flex-direction:column;gap:8px;flex-shrink:0;
+}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{
+  font-size:10px;padding:4px 10px;border-radius:20px;
+  border:1px solid var(--border);color:var(--muted);
+  cursor:pointer;font-family:var(--mono);
+  transition:all .15s;white-space:nowrap;background:transparent;
+}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+
+.inputRow{display:flex;gap:8px}
+.input{
+  flex:1;background:var(--surface2);border:1px solid var(--border);
+  border-radius:8px;padding:9px 12px;color:var(--text);
+  font-size:13px;font-family:var(--sans);outline:none;
+  resize:none;transition:border-color .15s;
+}
+.input:focus{border-color:var(--accent)}
+.input::placeholder{color:var(--muted)}
+.sendBtn{
+  background:var(--accent);color:#fff;border:none;
+  border-radius:8px;padding:9px 16px;cursor:pointer;
+  font-size:13px;font-weight:600;transition:all .15s;white-space:nowrap;
+  align-self:flex-end;
+}
+.sendBtn:hover{background:#2563eb}
+.sendBtn:disabled{background:var(--border);color:var(--muted);cursor:not-allowed}
