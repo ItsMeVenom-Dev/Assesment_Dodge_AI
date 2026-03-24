@@ -220,7 +220,7 @@ class QueryRequest(BaseModel):
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "db": str(DB_PATH), "db_exists": DB_PATH.exists()}
+    return {"status": "ok"}
 
 
 @app.post("/query")
