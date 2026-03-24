@@ -5,6 +5,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
+from fastapi import Request
+
 
 load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent / ".env")
 load_dotenv()
@@ -222,6 +224,10 @@ class QueryRequest(BaseModel):
 def health():
     return {"status": "ok"}
 
+
+@app.api_route("/stat", methods=["GET", "HEAD"])
+def health(request: Request):
+    return {"status": "ok"}
 
 @app.post("/query")
 def run_query(req: QueryRequest):
