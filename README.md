@@ -5,7 +5,7 @@ backed by SQLite and an LLM (Gemini 2.0 Flash or Groq), with a live graph visual
 
 ## 🚀 Live Demo
 
-Frontend: https://assesment-dodge-5xlmc0e3r-itsmevenom-devs-projects.vercel.app/
+Frontend: https://assesment-dodge-ai.vercel.app/
 
 Backend API: https://assesment-dodge-ai.onrender.com/docs
 
