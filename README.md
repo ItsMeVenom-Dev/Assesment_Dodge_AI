@@ -3,6 +3,12 @@
 A full-stack MVP that lets you query SAP O2C business data in natural language,
 backed by SQLite and an LLM (Gemini 2.0 Flash or Groq), with a live graph visualization.
 
+## 🚀 Live Demo
+
+Frontend: https://assessment-dodge-ai.vercel.app  
+Backend API: https://assessment-dodge-ai.onrender.com/docs
+
+
 **All 19 dataset tables are loaded and queryable.**
 
 ---
